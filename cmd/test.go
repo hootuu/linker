@@ -14,7 +14,7 @@ func main() {
 		os.Exit(-1)
 	}
 	go func() {
-		err := tail.Tail("vn001", "chain001", "20210201")
+		_, err := tail.Tail("vn001", "chain001", "20210201")
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(-1)
@@ -23,7 +23,7 @@ func main() {
 	}()
 	go func() {
 		for i := 0; i < 3; i++ {
-			err := tail.Ack("vn001", "chain001", "20210201")
+			err := tail.Ack("xxx")
 			if err != nil {
 				fmt.Println(err)
 			}
