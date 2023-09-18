@@ -1,17 +1,12 @@
 package main
 
-import (
-	linker "github.com/hootuu/tail"
-	"log/slog"
-)
-
 func main() {
-	cid, err := linker.GenCid("mojiu hello world")
-	if err != nil {
-		slog.Error("gencid failed", err)
-		return
-	}
-	slog.Info("cid:", cid)
+	//cid, err := linker.GenCid("mojiu hello world")
+	//if err != nil {
+	//	slog.Error("gencid failed", err)
+	//	return
+	//}
+	//slog.Info("cid:", cid)
 	//err := tail.Init("./data")
 	//if err != nil {
 	//	fmt.Println(err)

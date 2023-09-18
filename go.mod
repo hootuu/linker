@@ -1,6 +1,6 @@
 module github.com/hootuu/tail
 
-go 1.21.1
+go 1.20
 
 replace github.com/hootuu/domain => /Users/suuyoo.wg/hootuu/domain
 
