@@ -2,7 +2,6 @@ package linker
 
 import (
 	"github.com/hootuu/domain/scope"
-	"log/slog"
 )
 
 type Seeker interface {
@@ -21,7 +20,7 @@ func InjectSeekerFactory(sf SeekerFactory) {
 
 func GetSeekerFactory() SeekerFactory {
 	if gSeekerFactory == nil {
-		slog.Error("must call InjectSeekerFactory first")
+		gLogger.Error("must call InjectSeekerFactory first")
 	}
 	return gSeekerFactory
 }

@@ -3,7 +3,7 @@ package linker
 import (
 	"github.com/hootuu/domain/chain"
 	"github.com/hootuu/domain/scope"
-	"log/slog"
+	"go.uber.org/zap"
 )
 
 const HEAD int64 = 0
@@ -53,7 +53,7 @@ type NodePack struct {
 func NewNodePack(node *Node) (*NodePack, error) {
 	nodeCid, err := chain.GetStone().Inscribe(node)
 	if err != nil {
-		slog.Error("stone.Inscribe headNode error", err)
+		gLogger.Error("stone.Inscribe headNode error", zap.Error(err))
 		return nil, err
 	}
 	return &NodePack{
